@@ -1,16 +1,15 @@
-
-import { useLocation } from "react-router-dom";
+import { Tag, Text } from '@stone-payments/jade'
 
 export function Component(): JSX.Element {
-  const { pathname, search } = useLocation();
   return (
     <div>
-      <p>Dashboard</p>
-      <p>
-        {pathname} - {search}
-      </p>
+      <Text variant='display-medium'>Dashboard</Text>
+
+      <Tag size="medium" variant="info">Multimarca</Tag>
+      <Tag size="medium" variant="brand">Mulplataforma</Tag>
+      <Tag size="medium" variant="negative">Multitema</Tag>
     </div>
-  );
+  )
 }
 
-Component.displayName = "Dashboard";
+Component.displayName = "Dashboard"

@@ -10,6 +10,8 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@stone-payments/jade": "^5.8.0",
+		"@stone-payments/jade-design-tokens": "^28.30.0",
 		"axios": "^1.6.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",

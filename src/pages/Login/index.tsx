@@ -1,16 +1,11 @@
-
-import { useLocation } from "react-router-dom";
+import { Text } from "@stone-payments/jade"
 
 export function Component(): JSX.Element {
-  const { pathname, search } = useLocation();
   return (
     <div>
-      <p>Login</p>
-      <p>
-        {pathname} - {search}
-      </p>
+      <Text variant='display-medium'>Login</Text>
     </div>
-  );
+  )
 }
 
-Component.displayName = "Login";
+Component.displayName = "Login"

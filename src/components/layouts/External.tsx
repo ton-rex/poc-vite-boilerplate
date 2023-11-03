@@ -1,3 +1,4 @@
+import { Box, PageContainer } from "@stone-payments/jade";
 import * as React from "react";
 import { Outlet } from "react-router-dom";
 
@@ -6,11 +7,12 @@ import { Outlet } from "react-router-dom";
  */
 export function ExternalLayout(): JSX.Element {
   return (
-    <React.Fragment>
-      <p>Base</p>
-      <React.Suspense>
-        <Outlet />
-      </React.Suspense>
-    </React.Fragment>
+    <PageContainer>
+      <Box hasPadding>
+        <React.Suspense>
+          <Outlet />
+        </React.Suspense>
+      </Box>
+    </PageContainer>
   );
 }

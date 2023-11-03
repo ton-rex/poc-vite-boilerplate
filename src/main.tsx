@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { router } from './routes';
 import { RouterProvider } from 'react-router-dom';
 
+import './styles/globals'
+
 const rootElement = document.querySelector("#root") as Element;
 
 if (!rootElement.innerHTML) {
@@ -10,7 +12,9 @@ if (!rootElement.innerHTML) {
 
   root.render(
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <div className="jade ton">
+        <RouterProvider router={router} />
+      </div>
     </React.StrictMode>
   );
 }

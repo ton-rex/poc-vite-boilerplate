@@ -1,0 +1,38 @@
+TO DO
+
+- tests
+  - jest
+  - testing library
+  - coverage
+- state (optional)
+  - zustand
+- hooks
+  - usequery
+- style
+  - theme
+  - jade.ds
+- pages
+  - basic login
+  - basic home
+- routes
+  - private
+  - public
+  - auth
+- env vars
+- bundler analyze (optional)
+- storybook
+- gh ci
+- documentations
+  - readme
+  - cps
+  - hooks
+  - routes
+- support scripts
+  - format
+  - fixes
+  - coverage
+- rhf (optional)
+  - inputs
+  - masks
+  - tests
+- devtools
