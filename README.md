@@ -9,8 +9,8 @@ TO DO
 - hooks
   - usequery
 - style
-  - theme
-  - jade.ds
+  - theme - ok
+  - jade.ds - ok
 - pages
   - basic login
   - basic home
