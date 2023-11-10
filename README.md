@@ -36,4 +36,4 @@ $ yarn install
 $ yarn dev
 ```
 
-Made with 💚 by Team Rex
+Made with 💚 by Team Rex 🦖
