@@ -88,6 +88,17 @@
 				},
 				"ignore": ["semVer", "SemVer"]
 			}
+		],
+		"import-helpers/order-imports": [
+			"warn",
+			{
+				"newlinesBetween": "never",
+				"groups": ["module", "/^~/", ["parent", "sibling", "index"]],
+				"alphabetize": {
+					"order": "asc",
+					"ignoreCase": false
+				}
+			}
 		]
 	}
 }
