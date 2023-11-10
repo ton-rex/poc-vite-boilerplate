@@ -1,10 +1,10 @@
-![Banner](https://github.com/ton-rex/poc-vite-boilerplate/assets/31235308/e658a2f9-e928-48d1-9357-6c13bee876de)
+![Banner](https://github.com/ton-rex/poc-vite-boilerplate/assets/31235308/bc29f4b5-6ef1-46c6-99d1-61b5743e7a8d)
 
 <h1 align="center">React Admin</h1>
 
 ## About
 
-The idea of this repository is to create a boilerplate for React Admin with Typescript, Vite, Styled Components, Axios, Prettier and Eslint.
+The idea of this repository is to create a boilerplate for React Admin with Typescript, Vite, Jade, Styled Components, Axios, Prettier and Eslint.
 
 ## Technologies
 
