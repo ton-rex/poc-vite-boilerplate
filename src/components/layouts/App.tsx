@@ -1,6 +1,6 @@
+import { Box, PageContainer } from '@stone-payments/jade'
 import * as React from 'react'
 import { Outlet } from 'react-router-dom'
-import { Box, PageContainer } from '@stone-payments/jade'
 
 /**
  * The primary application layout.
