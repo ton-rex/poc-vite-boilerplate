@@ -2,7 +2,7 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from '../routes'
 import { StyledThemeProvider } from './theme'
 
-export interface ProvidersProps { }
+export interface ProvidersProps {}
 
 function Providers(): React.ReactElement {
 	return (

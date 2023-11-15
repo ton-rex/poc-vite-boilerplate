@@ -1,5 +1,5 @@
-import { ThemeProvider } from 'styled-components'
 import jade from '@stone-payments/jade-design-tokens/js/ton'
+import { ThemeProvider } from 'styled-components'
 
 type Props = {
 	children?: React.ReactNode
