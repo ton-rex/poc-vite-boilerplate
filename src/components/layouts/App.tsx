@@ -6,13 +6,13 @@ import { Outlet } from 'react-router-dom'
  * The primary application layout.
  */
 export function AppLayout(): JSX.Element {
-	return (
-		<PageContainer>
-			<Box hasPadding>
-				<React.Suspense>
-					<Outlet />
-				</React.Suspense>
-			</Box>
-		</PageContainer>
-	)
+  return (
+    <PageContainer>
+      <Box hasPadding>
+        <React.Suspense>
+          <Outlet />
+        </React.Suspense>
+      </Box>
+    </PageContainer>
+  )
 }
