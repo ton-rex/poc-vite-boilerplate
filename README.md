@@ -1,4 +1,5 @@
-![Banner](https://github.com/ton-rex/poc-vite-boilerplate/assets/31235308/bc29f4b5-6ef1-46c6-99d1-61b5743e7a8d)
+![Banner](https://github.com/ton-rex/poc-vite-boilerplate/assets/31235308/9c4780f9-0446-4e40-b3cc-9abde191c052)
+
 
 <h1 align="center">React Admin</h1>
 
