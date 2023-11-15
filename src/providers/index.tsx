@@ -5,13 +5,13 @@ import { StyledThemeProvider } from './theme'
 export interface ProvidersProps {}
 
 function Providers(): React.ReactElement {
-	return (
-		<div className="jade ton">
-			<StyledThemeProvider>
-				<RouterProvider router={router} />
-			</StyledThemeProvider>
-		</div>
-	)
+  return (
+    <div className="jade ton">
+      <StyledThemeProvider>
+        <RouterProvider router={router} />
+      </StyledThemeProvider>
+    </div>
+  )
 }
 
 export default Providers

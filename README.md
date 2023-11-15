@@ -4,7 +4,7 @@
 
 ## About
 
-The idea of this repository is to create a boilerplate for React Admin with Typescript, Vite, Jade, Styled Components, Axios, Prettier and Eslint.
+The idea of this repository is to create a boilerplate for React Admin with Typescript, Vite, Jade, Styled Components, Axios, Prettier, Eslint, Vitest, Test library and Storybook.
 
 ## Technologies
 

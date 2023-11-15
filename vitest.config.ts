@@ -7,7 +7,8 @@ export default mergeConfig(
 		test: {
 			include: ['src/**/*.spec.*', 'src/**/*.test.*'],
 			coverage: {
-				include: ['src/**/*'],
+				include: ['src/**/*.ts', 'src/**/*.tsx'],
+				all: true,
 			},
 			environment: 'jsdom',
 		},
