@@ -29,7 +29,7 @@ export function Component(): JSX.Element {
 				</Text>
 
 				{data?.map((item) => (
-					<Text variant="text-small">
+					<Text variant="text-small" key={item.id}>
 						id: {item.id}
 					</Text>
 				))}

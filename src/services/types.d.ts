@@ -1,21 +1,21 @@
-declare namespace Services {
-	/**
-	 *
-	 * @export
-	 * @interface APIResponse
-	 */
-	export interface APIResponse {
-		/**
-		 *
-		 * @type {number}
-		 * @memberof APIResponse
-		 */
-		code?: number
-		/**
-		 *
-		 * @type {string}
-		 * @memberof APIResponse
-		 */
-		msg?: string
-	}
+declare namespace APIResponses {
+  /**
+   *
+   * @export
+   * @interface Product
+   */
+  export interface Product {
+    /**
+     *
+     * @type {number}
+     * @memberof Product
+     */
+    id?: number
+    /**
+     *
+     * @type {string}
+     * @memberof Product
+     */
+    title?: string
+  }
 }
