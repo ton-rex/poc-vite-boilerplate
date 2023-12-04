@@ -121,7 +121,12 @@
       "warn",
       {
         "newlinesBetween": "never",
-        "groups": ["module", "/^~/", ["parent", "sibling", "index"]],
+        "groups": [
+          "module",
+          "/^@types/",
+          "/^~/",
+          ["parent", "sibling", "index"]
+        ],
         "alphabetize": {
           "order": "asc",
           "ignoreCase": false

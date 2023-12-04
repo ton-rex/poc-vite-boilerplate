@@ -1,4 +1,5 @@
-import Axios, { AxiosError, AxiosInstance } from 'axios'
+import type { AxiosError, AxiosInstance } from 'axios'
+import Axios from 'axios'
 import { createContext, useContext } from 'react'
 import { useMutation, useQuery, useQueryClient } from 'react-query'
 
@@ -49,18 +50,22 @@ axios.interceptors.response.use(
 
     if (error.response && error.response.status) {
       switch (error.response.status) {
-        case 401:
+        case 401: {
           window.location.href = '/login'
           break
-        case 403:
+        }
+        case 403: {
           window.location.href = '/login'
           break
-        case 404:
+        }
+        case 404: {
           // notify 404 error
           break
-        case 406:
+        }
+        case 406: {
           // notify 406 error
           break
+        }
         default:
         // notify error
       }
@@ -86,10 +91,10 @@ export const useAxios = () => {
   return useContext(AxiosContext)
 }
 
-type listParams = {
+type listParameters = {
   limit?: number
   offset?: number
-  filter?: string[]
+  filter?: Array<string>
   order?: string
 }
 
@@ -97,14 +102,14 @@ const useGetList = <T>(key: string, url: string) => {
   const axios = useAxios()
 
   const service = async () => {
-    let params: listParams = {}
+    const parameters: listParameters = {}
 
-    console.log('params: ', params)
+    console.log('params:', parameters)
 
     const data: T = await axios.get(`${url}`, {
-      params,
-      paramsSerializer: (params) => {
-        return JSON.stringify(params)
+      params: parameters,
+      paramsSerializer: (parameters) => {
+        return JSON.stringify(parameters)
       },
     })
 
@@ -113,11 +118,11 @@ const useGetList = <T>(key: string, url: string) => {
   return useQuery(key, () => service())
 }
 
-const useGetOne = <T>(key: string, url: string, params?: any) => {
+const useGetOne = <T>(key: string, url: string, parameters?: any) => {
   const axios = useAxios()
 
   const service = async () => {
-    const data: T = await axios.get(`${url}`, params)
+    const data: T = await axios.get(`${url}`, parameters)
 
     return data
   }
@@ -128,8 +133,8 @@ const useCreate = <T, U>(url: string) => {
   const axios = useAxios()
   const queryClient = useQueryClient()
 
-  return useMutation(async (params: T) => {
-    const data: U = await axios.post(`${url}`, params)
+  return useMutation(async (parameters: T) => {
+    const data: U = await axios.post(`${url}`, parameters)
     return data
   })
 }
@@ -155,7 +160,7 @@ const useDelete = <T>(url: string) => {
 const useBatch = (url: string) => {
   const axios = useAxios()
   const queryClient = useQueryClient()
-  return useMutation(async (ids: number[]) => {
+  return useMutation(async (ids: Array<number>) => {
     const data = await axios.post(`${url}`, { idList: ids })
     return data
   })

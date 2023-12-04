@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { AppLayout, ErrorLayout, ExternalLayout } from '../components/layouts'
+import { AppLayout, ErrorLayout, ExternalLayout } from '../presentation/layouts'
 import { privateRoutes } from './private-routes'
 import { publicRoutes } from './public-routes'
 

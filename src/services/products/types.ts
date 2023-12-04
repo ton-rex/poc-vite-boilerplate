@@ -1,8 +1,8 @@
 export interface Product {
-	id: string
+  id: string
 }
-export type ProductListResponse = Product[]
+export type ProductListResponse = Array<Product>
 
 export enum PRODUCTS_KEYS {
-	LIST = 'LIST',
+  LIST = 'LIST',
 }
