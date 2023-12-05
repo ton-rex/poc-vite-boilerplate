@@ -1,6 +1,6 @@
 import { Button, Text } from '@stone-payments/jade'
+import { useProductList } from '~/app/services/products'
 import { ButtonSignIn } from '~/presentation/pages/Login/components'
-import { useProductList } from '~/services/products'
 
 export function Component(): JSX.Element {
   const { data, error, isLoading, refetch } = useProductList()

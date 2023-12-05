@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import axios, { AxiosContext } from '~/services/request'
+import axios, { AxiosContext } from '~/app/services/request'
 
 export const AxiosProvider = ({
   children,

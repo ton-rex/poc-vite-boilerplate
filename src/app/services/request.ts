@@ -1,5 +1,4 @@
-import type { AxiosError, AxiosInstance } from 'axios'
-import Axios from 'axios'
+import Axios, { type AxiosError, type AxiosInstance } from 'axios'
 import { createContext, useContext } from 'react'
 import { useMutation, useQuery, useQueryClient } from 'react-query'
 
@@ -29,10 +28,12 @@ axios.interceptors.request.use((config) => {
 })
 
 // response interceptor
+// type response
 axios.interceptors.response.use(
   (response) => {
-    const data = response.data
+    const data: any = response.data
     console.log('response:', response)
+
     if (response.status === 200) {
       return data
     }
@@ -45,6 +46,7 @@ axios.interceptors.response.use(
 
     return Promise.reject(new Error(response.statusText || 'Error'))
   },
+
   (error: AxiosError) => {
     console.log('err:', error, error.response) // for debug
 
@@ -122,7 +124,7 @@ const useGetOne = <T>(key: string, url: string, parameters?: any) => {
   const axios = useAxios()
 
   const service = async () => {
-    const data: T = await axios.get(`${url}`, parameters)
+    const data: T = await axios.get(`${url}`, parameters || {})
 
     return data
   }
