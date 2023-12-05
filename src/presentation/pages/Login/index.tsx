@@ -16,7 +16,9 @@ export function Component(): JSX.Element {
 
         <Button
           onClick={() => {
-            refetch()
+            refetch().catch(() => {
+              console.log('error')
+            })
           }}
         >
           refetch

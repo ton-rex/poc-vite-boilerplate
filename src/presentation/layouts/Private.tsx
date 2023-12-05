@@ -3,9 +3,9 @@ import * as React from 'react'
 import { Outlet } from 'react-router-dom'
 
 /**
- * The minimal app layout to be used on pages such Login
+ * The primary application layout.
  */
-export function ExternalLayout(): JSX.Element {
+export function PrivateLayout(): JSX.Element {
   return (
     <PageContainer>
       <Box hasPadding>
