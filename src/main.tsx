@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Providers from './providers'
+import Providers from './infra/providers'
 
-import './styles/globals'
+import './presentation/styles/globals'
 
 const rootElement = document.querySelector('#root') as Element
 

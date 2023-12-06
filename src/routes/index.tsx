@@ -1,5 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { AppLayout, ErrorLayout, ExternalLayout } from '../components/layouts'
+import {
+  ErrorLayout,
+  PrivateLayout,
+  PublicLayout,
+} from '../presentation/layouts'
 import { privateRoutes } from './private-routes'
 import { publicRoutes } from './public-routes'
 
@@ -10,13 +14,13 @@ import { publicRoutes } from './public-routes'
 export const router = createBrowserRouter([
   {
     path: '',
-    element: <ExternalLayout />,
+    element: <PublicLayout />,
     errorElement: <ErrorLayout />,
     children: publicRoutes,
   },
   {
-    path: '',
-    element: <AppLayout />,
+    path: '/',
+    element: <PrivateLayout />,
     errorElement: <ErrorLayout />,
     children: privateRoutes,
   },
