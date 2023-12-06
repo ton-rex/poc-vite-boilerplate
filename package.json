@@ -10,7 +10,7 @@
     "lint:fix": "yarn lint --fix",
     "prettier:fix": "yarn prettier -w src",
     "preview": "vite preview",
-    "test": "vitest",
+    "test": "vitest -u",
     "test:coverage": "vitest run --coverage",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
@@ -23,7 +23,8 @@
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.18.0",
-    "styled-components": "^6.1.0"
+    "styled-components": "^6.1.0",
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.3",
@@ -37,8 +38,8 @@
     "@storybook/react-vite": "^7.5.3",
     "@storybook/testing-library": "^0.2.2",
     "@storybook/theming": "^7.5.3",
-    "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/react": "^14.1.0",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.1.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -53,11 +54,12 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-unicorn": "^48.0.1",
-    "jsdom": "^22.1.0",
+    "jsdom": "^23.0.1",
     "prettier": "^3.0.0",
     "storybook": "^7.5.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
+    "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^0.34.6"
   },
   "resolutions": {
