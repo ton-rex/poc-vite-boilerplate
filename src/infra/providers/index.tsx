@@ -1,4 +1,3 @@
-import { Suspense } from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { RouterProvider } from 'react-router-dom'
 import { AxiosProvider } from '~/infra/providers/axios'
@@ -35,11 +34,7 @@ function Providers(): React.ReactElement {
       <QueryClientProvider client={queryClient} contextSharing>
         <div className="jade ton">
           <StyledThemeProvider>
-            <Suspense
-            // fallback={<PossibleFallback />}
-            >
-              <RouterProvider router={router} />
-            </Suspense>
+            <RouterProvider router={router} />
           </StyledThemeProvider>
         </div>
       </QueryClientProvider>

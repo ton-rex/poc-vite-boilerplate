@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
     children: publicRoutes,
   },
   {
-    path: '',
+    path: '/',
     element: <PrivateLayout />,
     errorElement: <ErrorLayout />,
     children: privateRoutes,

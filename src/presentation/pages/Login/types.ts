@@ -9,4 +9,5 @@ export enum States {
 
 export interface LoginContainerProps {
   state?: States
+  doLogin: () => void
 }

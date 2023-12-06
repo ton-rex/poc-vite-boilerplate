@@ -1,15 +1,20 @@
 import { Box, PageContainer } from '@stone-payments/jade'
 import * as React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
+import useGlobalStore from '~/infra/store/useGlobalStore'
+
+const Layout = () => (
+  <PageContainer>
+    <Box hasPadding>
+      <React.Suspense>
+        <Outlet />
+      </React.Suspense>
+    </Box>
+  </PageContainer>
+)
 
 export function PublicLayout(): JSX.Element {
-  return (
-    <PageContainer>
-      <Box hasPadding>
-        <React.Suspense>
-          <Outlet />
-        </React.Suspense>
-      </Box>
-    </PageContainer>
-  )
+  const { isAuthenticated } = useGlobalStore((state) => state)
+
+  return isAuthenticated ? <Navigate to="/" /> : <Layout />
 }

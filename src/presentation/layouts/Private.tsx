@@ -1,15 +1,12 @@
-import { Box, PageContainer } from '@stone-payments/jade'
+import { Box, PageContainer, Spinner } from '@stone-payments/jade'
 import * as React from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
-import useGlobalStore from '~/infra/store/useGlobalState'
+import useGlobalStore from '~/infra/store/useGlobalStore'
 
-/**
- * The primary application layout.
- */
 const Layout = () => (
   <PageContainer>
     <Box hasPadding>
-      <React.Suspense>
+      <React.Suspense fallback={<Spinner size="large" />}>
         <Outlet />
       </React.Suspense>
     </Box>
@@ -19,5 +16,5 @@ const Layout = () => (
 export function PrivateLayout(): JSX.Element {
   const { isAuthenticated } = useGlobalStore((state) => state)
 
-  return isAuthenticated ? <Layout /> : <Navigate to="/" />
+  return isAuthenticated ? <Layout /> : <Navigate to="/entrar" />
 }

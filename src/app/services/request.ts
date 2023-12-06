@@ -44,7 +44,7 @@ axios.interceptors.response.use(
 
     // notify error
     if (response.status === 401) {
-      window.location.href = '/login'
+      window.location.href = '/entrar'
     }
 
     return Promise.reject(new Error(response.statusText || 'Error'))
@@ -56,11 +56,11 @@ axios.interceptors.response.use(
     if (error.response && error.response.status) {
       switch (error.response.status) {
         case 401: {
-          window.location.href = '/login'
+          window.location.href = '/entrar'
           break
         }
         case 403: {
-          window.location.href = '/login'
+          window.location.href = '/entrar'
           break
         }
         case 404: {

@@ -1,3 +1,3 @@
 export const publicRoutes = [
-  { path: 'login', lazy: () => import('../presentation/pages/Login') },
+  { path: 'entrar', lazy: () => import('../presentation/pages/Login') },
 ]

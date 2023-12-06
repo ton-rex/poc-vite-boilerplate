@@ -1,11 +1,18 @@
 import type React from 'react'
-import { DashboardContainer } from '~/presentation/pages/Dashboard/ui'
+import useGlobalStore from '~/infra/store/useGlobalStore'
 import { States, type PageProps } from '~/presentation/pages/Login/types'
+import { LoginContainer } from '~/presentation/pages/Login/ui'
 
 export const Component: React.FC<PageProps> = () => {
   const state = States.default
 
-  return <DashboardContainer state={state} />
+  const { setIsAuthenticated } = useGlobalStore((state) => state)
+
+  const handleDoLogin = () => {
+    setIsAuthenticated(true)
+  }
+
+  return <LoginContainer state={state} doLogin={handleDoLogin} />
 }
 
 Component.displayName = 'Login'

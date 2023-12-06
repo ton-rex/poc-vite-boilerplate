@@ -1,5 +1,9 @@
 import { Button } from '@stone-payments/jade'
 
-export function ButtonSignIn() {
-  return <Button variant="primary-solid">Sign In</Button>
+export function ButtonSignIn(props: any) {
+  return (
+    <Button variant="primary-solid" {...props}>
+      Sign In
+    </Button>
+  )
 }
