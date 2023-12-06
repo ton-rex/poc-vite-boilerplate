@@ -4,10 +4,21 @@ import {
   type RenderOptions,
   type RenderResult,
 } from '@testing-library/react'
+import { QueryClient, QueryClientProvider } from 'react-query'
 import { StyledThemeProvider } from '~/infra/providers/theme'
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+    },
+  },
+})
+
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => (
-  <StyledThemeProvider>{children}</StyledThemeProvider>
+  <QueryClientProvider client={queryClient}>
+    <StyledThemeProvider>{children}</StyledThemeProvider>
+  </QueryClientProvider>
 )
 
 const customRender = (

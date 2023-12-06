@@ -4,8 +4,12 @@ import type { Decorator } from '@storybook/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 const queryClient = new QueryClient({
-  defaultOptions: { queries: { staleTime: Infinity, refetchOnMount: true } },
-});
+  defaultOptions: {
+    queries: {
+      retry: false,
+    },
+  },
+})
 
 export const QueryDecorator: Decorator = (Story) => {
   return (

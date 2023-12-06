@@ -1,7 +1,5 @@
 import { Tag, Text } from '@stone-payments/jade'
 import styled from 'styled-components'
-import { PRODUCTS_KEYS, type Product } from '~/app/services/products/types'
-import { useGetList } from '~/app/services/request'
 import type { DashboardContainerProps } from '~/presentation/pages/Dashboard/types'
 
 const NewTag = styled.button`
@@ -17,8 +15,6 @@ const NewTag = styled.button`
 `
 
 export const DashboardContainer: React.FC<DashboardContainerProps> = () => {
-  const { data } = useGetList<Array<Product>>(PRODUCTS_KEYS.LIST, '/products')
-
   return (
     <div>
       <Text variant="display-medium">Dashboard</Text>
@@ -35,7 +31,7 @@ export const DashboardContainer: React.FC<DashboardContainerProps> = () => {
 
       <br />
 
-      {data?.map((item) => <NewTag key={item.id}>ID: {item.id}</NewTag>)}
+      <NewTag> Multitema</NewTag>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { describe, vi } from 'vitest'
-import { testSnapshots } from '~/infra/utils/tests'
+import { testSnapshots } from '~/tests/utils'
 import * as states from './componentStates'
 
 vi.mock('@stone-payments/jade', () => {
