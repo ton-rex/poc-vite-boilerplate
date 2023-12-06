@@ -1,3 +1,3 @@
-export { ErrorLayout } from './Error'
-export { PrivateLayout } from './Private'
-export { PublicLayout } from './Public'
+export { ErrorLayout } from './error'
+export { PrivateLayout } from './private'
+export { PublicLayout } from './public'

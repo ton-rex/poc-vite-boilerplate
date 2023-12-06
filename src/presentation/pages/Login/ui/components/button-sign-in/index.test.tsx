@@ -1,5 +1,5 @@
-import { render, screen, type RenderResult } from '@testing-library/react'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
+import { render, screen, type RenderResult } from '~/tests'
 import { ButtonSignIn } from '.'
 
 vi.mock('@stone-payments/jade', () => {

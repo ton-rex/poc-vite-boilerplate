@@ -1,15 +1,15 @@
 import type { Meta } from '@storybook/react'
-import { Component } from '.'
+import { LoginContainer } from '~/presentation/pages/Login/ui'
 
 const meta = {
   title: 'pages/Login',
-  component: Component,
+  component: LoginContainer,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-} as Meta<typeof Component>
+} as Meta<typeof LoginContainer>
 
 export default meta
 
-export const Default = () => <Component />
+export const Default = () => <LoginContainer />

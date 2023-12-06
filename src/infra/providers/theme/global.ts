@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components'
+
+export const GlobalStyles = createGlobalStyle`
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -24,18 +27,10 @@ body {
 	margin: 0;
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
-
 main {
 	display: block;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
 
 h1 {
 	font-size: 2em;
@@ -55,11 +50,7 @@ hr {
 	height: 0; /* 1 */
 	overflow: visible; /* 2 */
 }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
+ 
 
 pre {
 	font-family: monospace, monospace; /* 1 */
@@ -96,12 +87,7 @@ b,
 strong {
 	font-weight: bolder;
 }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
+ 
 code,
 kbd,
 samp {
@@ -116,11 +102,7 @@ samp {
 small {
 	font-size: 80%;
 }
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
+ 
 
 sub,
 sup {
@@ -231,13 +213,7 @@ button:-moz-focusring,
 fieldset {
 	padding: 0.35em 0.75em 0.625em;
 }
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
+ 
 
 legend {
 	box-sizing: border-box; /* 1 */
@@ -301,11 +277,7 @@ textarea {
 [type='search']::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
+ 
 
 ::-webkit-file-upload-button {
 	-webkit-appearance: button; /* 1 */
@@ -348,4 +320,4 @@ template {
 
 [hidden] {
 	display: none;
-}
+}`

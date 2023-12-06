@@ -32,7 +32,7 @@ const queryClient = new QueryClient({
 function Providers(): React.ReactElement {
   return (
     <AxiosProvider>
-      <QueryClientProvider client={queryClient}>
+      <QueryClientProvider client={queryClient} contextSharing>
         <div className="jade ton">
           <StyledThemeProvider>
             <Suspense

@@ -1,43 +1,11 @@
-import { Button, Text } from '@stone-payments/jade'
-import { useProductList } from '~/app/services/products'
-import { ButtonSignIn } from '~/presentation/pages/Login/components'
+import type React from 'react'
+import { DashboardContainer } from '~/presentation/pages/Dashboard/ui'
+import { States, type PageProps } from '~/presentation/pages/Login/types'
 
-export function Component(): JSX.Element {
-  const { data, error, isLoading, refetch } = useProductList()
+export const Component: React.FC<PageProps> = () => {
+  const state = States.default
 
-  return (
-    <>
-      <div>
-        <Text variant="display-medium">Login</Text>
-      </div>
-
-      <div>
-        <ButtonSignIn />
-
-        <Button
-          onClick={() => {
-            refetch().catch(() => {
-              console.log('error')
-            })
-          }}
-        >
-          refetch
-        </Button>
-      </div>
-
-      <div>
-        <Text variant="text-small">isLoading: {JSON.stringify(isLoading)}</Text>
-
-        <Text variant="text-small">error: {JSON.stringify(error)}</Text>
-
-        {data?.map((item) => (
-          <Text variant="text-small" key={item.id}>
-            id: {item.id}
-          </Text>
-        ))}
-      </div>
-    </>
-  )
+  return <DashboardContainer state={state} />
 }
 
 Component.displayName = 'Login'
