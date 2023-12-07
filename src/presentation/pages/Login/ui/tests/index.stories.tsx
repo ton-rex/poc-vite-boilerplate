@@ -1,4 +1,5 @@
-import type { Meta } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
+import type { LoginContainerProps } from '~/presentation/pages/Login/types'
 import { LoginContainer } from '~/presentation/pages/Login/ui'
 
 const meta = {
@@ -8,8 +9,15 @@ const meta = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
+  args: {
+    doLogin: () => {
+      alert('doLogin :)')
+    },
+  },
 } as Meta<typeof LoginContainer>
 
-export default meta
+export const Default: StoryFn<LoginContainerProps> = ({ ...args }) => (
+  <LoginContainer {...args} />
+)
 
-export const Default = () => <LoginContainer />
+export default meta
